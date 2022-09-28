@@ -8,3 +8,5 @@
 
 * Изучить документацию на сайте https://openweathermap.org/api
 * Вывести в текущем и недельном прогнозе скорость ветра и видимость
+
+Отчет о проделанной работе доступен в [пулл реквесте](https://github.com/PatriotRossii/meteoinformation_laboratory/pull/1).
