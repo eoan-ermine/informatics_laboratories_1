@@ -4,6 +4,8 @@
 
 Ссылка на задание: [pdf](appendix/task.pdf)
 
+Ссылка на отчет о проделанной работе: [docx](appendix/report.docx)
+
 ## Домашнее задание
 
 * Изучить документацию на сайте https://openweathermap.org/api
