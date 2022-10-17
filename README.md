@@ -12,3 +12,19 @@
 * Вывести в текущем и недельном прогнозе скорость ветра и видимость
 
 Отчет о проделанной работе доступен в [пулл реквесте](https://github.com/PatriotRossii/meteoinformation_laboratory/pull/1).
+
+
+### Инструкция по запуску
+
+С использованием пакетного менеджера `poetry`:
+
+```bash
+poetry run meteoinformation
+```
+
+Стандартными средствами `python`:
+
+```bash
+pip3 install -r requirements.txt
+python3 meteoinformation
+```
