@@ -22,7 +22,7 @@
 poetry run meteoinformation
 ```
 
-Стандартными средствами `python`:
+Стандартными средствами `python` (рекомендуется прежде создать отдельное [виртуальное окружение](https://docs.python.org/3/library/venv.html)):
 
 ```bash
 pip3 install -r requirements.txt
