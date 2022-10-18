@@ -1,4 +1,4 @@
-import os
+import sys
 
 import requests
 
@@ -9,6 +9,9 @@ if __name__ == "__main__":
 	res = requests.get("http://api.openweathermap.org/data/2.5/weather", params={
 		"q": city, "units": "metric", "lang": "ru", "APPID": appid
 	})
+	if res.status_code != 200:
+		print("Error, can't retrieve current weather information")
+		sys.exit(1)
 	data = res.json()
 
 	print("Город:", city)
@@ -22,13 +25,16 @@ if __name__ == "__main__":
 	res = requests.get("http://api.openweathermap.org/data/2.5/forecast", params={
 		"q": city, "units": "metric", "lang": "ru", "APPID": appid
 	})
+	if res.status_code != 200:
+		print("Error, can't retrieve forecast")
+		sys.exit(1)
 	data = res.json()
 
-	print("Прогноз погоды на неделю")
+	print("\nПрогноз погоды на неделю\n")
 	for element in data["list"]:
 		print(f"Дата <{element['dt_txt']}>")
 		print("Температура <{0:+3.0f}>".format(element["main"]["temp"]))
 		print(f"Видимость (м) <{element['visibility']}>")
 		print(f"Скорость ветра (м/с) <{element['wind']['speed']}>")
 		print(f"Погодные условия <{element['weather'][0]['description']}>")
-		print("_____________________________")
+		print("_____________________________\n")
